@@ -1,0 +1,23 @@
+{
+  "name": "note-taker-inquirer",
+  "version": "1.0.0",
+  "description": "## User Stories",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/surajverma2587/note-taker-inquirer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/surajverma2587/note-taker-inquirer/issues"
+  },
+  "homepage": "https://github.com/surajverma2587/note-taker-inquirer#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
