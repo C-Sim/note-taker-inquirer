@@ -1,6 +1,8 @@
-const inquirer = require("inquirer");
-const path = require("path");
 const fs = require("fs");
+const path = require("path");
+const inquirer = require("inquirer");
+const figlet = require("figlet");
+const open = require("open");
 
 const Appointment = require("./lib/Appointment");
 const Bill = require("./lib/Bill");
@@ -111,15 +113,27 @@ const init = async () => {
     }
   }
 
-  console.log(notes);
-
   // generate HTML
   const html = generateHTML(notes);
 
   // write html to file
   fs.writeFileSync(path.join(__dirname, "../dist", "index.html"), html);
 
-  console.log("DONE");
+  console.log(
+    figlet.textSync("Done", {
+      font: "Doom",
+      horizontalLayout: "default",
+      verticalLayout: "default",
+      width: 80,
+      whitespaceBreak: true,
+    })
+  );
+
+  const root = path.dirname(require.main.filename);
+
+  const absolutePath = path.join(root, "../dist/index.html");
+
+  open(`file://${absolutePath}`, { app: "chrome" });
 };
 
 init();

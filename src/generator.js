@@ -32,6 +32,7 @@ const generateHTML = (notes) => {
         </header>
         <main>
           <div
+            id="notes-container"
             class="d-flex justify-content-center flex-wrap flex-row align-items-center"
           >
             ${generateNotes(notes)}
